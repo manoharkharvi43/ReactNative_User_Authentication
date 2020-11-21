@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { StyleSheet, Pressable, View } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 import { Input } from "react-native-elements";

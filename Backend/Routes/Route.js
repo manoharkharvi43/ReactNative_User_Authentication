@@ -34,7 +34,10 @@ route.post("/signin", async (req, res) => {
 	});
 	try {
 		const user_details = await Data.save();
-		const user_token = jwt.sign({ _id: user_details._id }, process.env.SECRET_KEY);
+		const user_token = jwt.sign(
+			{ _id: user_details._id },
+			process.env.SECRET_KEY
+		);
 		res.header("auth-token", user_token).send(user_token);
 	} catch (err) {
 		res.send({ message: err });

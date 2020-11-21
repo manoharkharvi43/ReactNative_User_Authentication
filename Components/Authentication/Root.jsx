@@ -6,15 +6,12 @@ import jwtDecode from "jwt-decode";
 import Homepage from "../MainComps/Homepage";
 import AuthToken from "../AuthToken";
 
-
 export const errorMessage = createContext();
-
 
 const Root = ({ navigation }) => {
 	const [error, seterror] = useState("");
 	const [user, setuser] = useState("");
 
-	
 	const url = "http://'YOUR IP ADDRESS':4000/login";
 
 	const go_to_siginPage = () => {
